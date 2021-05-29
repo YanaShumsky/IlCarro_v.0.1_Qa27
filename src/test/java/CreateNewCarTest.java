@@ -50,7 +50,7 @@ public class CreateNewCarTest extends TestBase {
                 .withSeats("5")
                 .withCarClass("Luxury")
                 .withFuelConsumption("10")
-                .withCarRegNum("12211004")
+                .withCarRegNum("12210101")
                 .withPrice("350")
                 .withDistanceIncluded("500");
         logger.info("Create new card with Registered number: " + car.getCarRegNum());

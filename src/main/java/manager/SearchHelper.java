@@ -1,9 +1,6 @@
 package manager;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -39,6 +36,9 @@ public class SearchHelper extends HelperBase{
         pause(2000);
         click(By.cssSelector("div.pac-item"));
         pause(2000);
+        /*JavascriptExecutor js =(JavascriptExecutor)wd;
+        js.executeScript("document.getElementById('city').value='Haifa, Israel';");*/
+
 
     }
 

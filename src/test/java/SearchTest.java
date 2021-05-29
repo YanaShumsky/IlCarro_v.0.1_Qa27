@@ -8,7 +8,7 @@ public class SearchTest extends TestBase{
     @Test
     public void typeSearchPeriod(){
         //      "5/15/2021 - 5/20/2021"
-        app.search().fillSearchFormByType ("Haifa","5/25/2021","5/30/2021");
+        app.search().fillSearchFormByType ("Haifa","5/27/2021","5/30/2021");
         app.search().pause(2000);
         app.search().clickYallaBtn();
         Assert.assertTrue(app.search().isListOfCarsAppeared());
@@ -19,7 +19,7 @@ public class SearchTest extends TestBase{
     @Test
     public void selectSerachPeriod(){
         // 5/15/2021 - 5/25/2021
-        app.search().fillSearchFormBySelectDate("Haifa","5/25/2021"," 5/30/2021");
+        app.search().fillSearchFormBySelectDate("Haifa","5/27/2021"," 5/30/2021");
         app.search().pause(2000);
         app.search().clickYallaBtn();
         app.search().pause(2000);

@@ -21,6 +21,7 @@ public class ApplicationManager {
     SearchHelper search;
     String browser;
     Properties properties;
+    JScriptHelper jsHelper;
 
 
     public ApplicationManager(String browser) {
@@ -51,6 +52,7 @@ public class ApplicationManager {
         user = new UserHelper(wd);
         car = new CarHelper(wd);
         search= new SearchHelper(wd);
+        jsHelper = new JScriptHelper(wd);
 
     }
     public String setEmail(){
@@ -81,5 +83,9 @@ public  String  setPassword(){
 
     public SearchHelper search() {
         return search;
+    }
+
+    public JScriptHelper executor() {
+        return jsHelper;
     }
 }
