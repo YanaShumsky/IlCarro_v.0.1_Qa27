@@ -44,7 +44,7 @@ public Iterator<Object[]> dataFile() throws IOException {
         return  list.iterator();
 }
 
-    @Test(dataProvider = "dataFile")
+    @Test(dataProvider = "dataFile",enabled = false)
     public void loginTestFromFile(User user) {
 
         app.user().openLoginForm();
@@ -60,7 +60,7 @@ public Iterator<Object[]> dataFile() throws IOException {
     }
 
 
-    @Test (dataProvider = "validData")
+    @Test (dataProvider = "validData",enabled = false)
     public void loginTestDataProvider(String email, String password) {
 
         app.user().openLoginForm();
@@ -76,7 +76,7 @@ public Iterator<Object[]> dataFile() throws IOException {
 
     }
 
-    @Test(dataProvider = "dataFile", dataProviderClass = DataProviders.class)
+    @Test(dataProvider = "dataFile", dataProviderClass = DataProviders.class,enabled = false)
     public void loginTestFromFileFromClass(User user) {
 
         app.user().openLoginForm();
@@ -92,7 +92,7 @@ public Iterator<Object[]> dataFile() throws IOException {
     }
 
 
-    @Test(invocationCount = 2)
+    @Test
     public void loginTest() {
 
         app.user().openLoginForm();
