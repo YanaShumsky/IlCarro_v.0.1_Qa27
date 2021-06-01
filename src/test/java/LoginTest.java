@@ -107,4 +107,18 @@ public Iterator<Object[]> dataFile() throws IOException {
 
     }
 
-}
+    @Test
+    public void loginTestJSExecutor() {
+
+        app.user().openLoginForm();
+        app.user().fillLoginFormJS(new User().withEmail("marsh@gmail.com").withPassword("Marsh1234$"));
+        logger.info("Login with mail: " + "marsh@gmail.com" + "\nLogin with password:" + "Marsh1234$");
+        app.user().clickLoginButton();
+        app.user().pause(2000);
+        app.user().successLogin();
+        app.user().pause(4000);
+        Assert.assertTrue(app.user().islogged());
+        logger.info("Test passed");
+    }
+
+    }

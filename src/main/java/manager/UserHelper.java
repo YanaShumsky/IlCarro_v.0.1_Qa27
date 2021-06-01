@@ -2,6 +2,7 @@ package manager;
 
 import models.User;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
 public class UserHelper extends HelperBase{
@@ -39,5 +40,13 @@ public class UserHelper extends HelperBase{
         clickLoginButton();
         pause(2000);
         successLogin();
+    }
+
+    public void fillLoginFormJS(User user) {
+        JavascriptExecutor js = (JavascriptExecutor)wd;
+        js.executeScript("document.getElementById('email').value='marsh@gmail.com';");
+        js.executeScript("document.getElementById('password').value='Marsh1234$';");
+
+
     }
 }
